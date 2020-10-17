@@ -143,10 +143,20 @@ footer{
     font-size: var(--tamanio-mediano);
     margin: 0 2rem;
 }
+.derechos{
+    background: var(--color-body);
+}
+.derechos p{
+    margin: .3rem 0;
+    font-weight: 200;
+}
 
 @media only screen and (max-width: 900px){
    
-    
+    header img{
+        width: 25%;
+        margin: 2em;
+    }
     .profesion{
         font-size: var(--tamanio-mediano);
     }
@@ -177,6 +187,13 @@ footer{
     }
     .redes a i{
         margin: 0 1rem;
+    }
+
+}
+@media only screen and (max-width: 900px){
+    header img{
+        width: 40%;
+        margin: 2em;
     }
 
 }
