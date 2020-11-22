@@ -5,6 +5,7 @@
     --color-letra-gris:#CDCDCD;
     --color-blanco:#FFFFFF;
     --color-letra-proyecto:#CDCDCD;
+    --color-celeste:cornflowerblue;
     --tamanio-grande:80px;
     --tamanio-mediano: 40px;
     --tamanio-pequeño: 25px;
@@ -43,7 +44,7 @@ header img{
     text-align: center;
 }
 
-.proyectos{
+.proyectos, .frontend-mentor{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
@@ -95,6 +96,34 @@ header img{
 .proyectos-futuros p{
     color: var(--color-letra-gris) ;
     margin-left: 1rem;
+}
+.frontend-mentor{
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2.5rem;
+}
+.frontend-mentor .titulo{
+    text-align: center;
+    color: var(--color-celeste);
+    font-size: var(--tamanio-pequeño);
+    margin-bottom: 0;
+}
+.soluciones{
+    display: inline-flex;
+    font-size: var(--tamanio-pequeño);
+}
+.solucion{
+    margin: 1rem;
+}
+.solucion p {
+    text-align: left;
+    color:var(--color-celeste);
+}
+.solucion a{
+    text-decoration: none;
+    color: var(--color-letra-proyecto);
+}
+.solucion i{
+    color: #000000;
 }
 .cita{
     width: 90%;
