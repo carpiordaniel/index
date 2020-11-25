@@ -9,6 +9,7 @@
     --tamanio-grande:80px;
     --tamanio-mediano: 40px;
     --tamanio-pequeño: 25px;
+    --tamanio-responsive: 18px;
     --fuente: 'Roboto', sans-serif;
 }
 
@@ -223,6 +224,15 @@ footer{
     header img{
         width: 40%;
         margin: 2em;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+
+    .soluciones{
+        display: inline-flex;
+        font-size: var(--tamanio-responsive);
     }
 
 }
