@@ -109,11 +109,14 @@ header img{
     margin-bottom: 0;
 }
 .soluciones{
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     font-size: var(--tamanio-pequeño);
 }
 .solucion{
-    margin: 1rem;
+    margin: 0 1rem;
+    border-bottom: 1px solid var(--color-letra-gris);
+    
 }
 .solucion p {
     text-align: left;
@@ -208,6 +211,9 @@ footer{
     .proyectos-futuros img{
         width: 30%;
     }
+    .soluciones{
+        grid-template-columns: repeat(1, 1fr);
+    }
     .cita::before{ 
         font-size: 100px;
     }
@@ -229,9 +235,12 @@ footer{
 }
 
 @media only screen and (max-width: 550px){
-
+    .frontend-mentor .titulo{
+        font-size: 1.2rem;
+    }
     .soluciones{
-        display: inline-flex;
+     
+        grid-template-columns: repeat(1, 1fr);
         font-size: var(--tamanio-responsive);
     }
 
