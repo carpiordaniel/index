@@ -239,9 +239,13 @@ footer{
         font-size: 1.5rem;
         
     }
-    /* [id]{
+    [id]{
         scroll-margin-top: 1rem;
-    } */
+    }
    
+    .container-proyectos-cards{
+        width: 80%;
+        
+    }
     
 }
