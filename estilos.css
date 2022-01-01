@@ -15,10 +15,14 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: var(--fuente);
     background-color: var(--negro-uno);
+}
+[id]{
+    scroll-margin-top: 6rem;
 }
 .container-general{
     max-width: 90rem;
@@ -74,32 +78,47 @@ body{
     width: 1.5rem;
 
 }
-.container-hero .imagen-hero{
+
+
+section .container-hero{
     height: 35rem;
     background-image: url(img/img-hero.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display: flex;
-   text-align: center;
-   
+    
 }
-.container-hero .imagen-hero .h1 h1{
-    font-size: 4rem;
-}
-.container-hero .imagen-hero .h1 p{
-    font-size: 3rem;
-    padding: 0 1rem;
-}
-.container-hero .imagen-hero .h1{
-    background-color: #0000007c;
-    width: 100%;
+section .container-hero .imagen-hero {
+    background-color: rgba(0, 0, 0, 0.693);
     height: 100%;
     color: var(--blanco);
     display: flex;
-    justify-content: center;
+    width: 100%;
+}
+section .container-hero .imagen-hero .h1{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    
     align-items: center;
 }
+section .container-hero .imagen-hero .h1 .contenedor span,
+section .container-hero .imagen-hero .h1 .contenedor h1{
+    font-size: 2.5rem;
+    margin: .21rem 0;
+    text-shadow: 0px 4px 4px rgba(51, 51, 51, 0.81);
+    font-weight: 600;
+
+}
+section .container-hero .imagen-hero .h1 .contenedor p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-shadow: 0px 4px 4px rgba(51, 51, 51, 0.81);
+    color: var(--blanco);
+}
+
+
 
 .acerca-de-mi{
     width: 90%;
@@ -125,6 +144,8 @@ hr{
     margin: 2rem 0;
     font-weight: 200;
 }
+
+
 .container-proyectos{
     background-color: #252525;
     padding-bottom: 3rem;
@@ -134,49 +155,48 @@ hr{
 }
 .container-proyectos-cards{
     display: grid;
-    grid-template-columns: repeat( auto-fit , minmax(15rem, 1fr));
+    grid-template-columns: repeat( auto-fit , minmax(20rem, 1fr));
     width: 90%;
     margin: 0 auto;
-    gap: 1rem;
+    gap: 4rem;
 }
-.card-proyectos{
-    background-color:var(--fondo-card);
-    border-radius: .5rem;
-    border-left: 8px solid var(--celeste);
-    padding: .3rem 0;
-    padding-left: 2rem;
+.container-proyectos-cards .card-proyectos{
+    
+    width: auto;
+    
 }
-[id]{
-    scroll-margin-top: 6rem;
+.container-proyectos-cards .card-proyectos img{
+   width: 100%;
+   /* border-left: 5px solid var(--celeste); */
+   border-radius: 5px;
+   box-shadow: -4px 10px 20px 1px #000000;
 }
-
-.card-proyectos .ir-web{
-    background-color: var(--celeste);
-    width: 9rem;
-    height: 2rem;
-    border-radius: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-proyectos-cards .card-proyectos img:hover{
+    /* cursor: pointer; */
+    transform: scale(1.1);
+    transition: transform .6s;
+ }
+.container-proyectos-cards .card-proyectos div img{
+    width: 20px;
+    border: none;
+ }
+ .container-proyectos-cards .card-proyectos h2{
+    color: var(--celeste);
+    font-size: 1.2rem;
+    font-weight: 600;
   
-}
-.card-proyectos .ir-web .enlace{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-proyectos .ir-web img{
-    width: 25px;
-    height: 23.4px;
-    margin-left: .3rem;
-}
-.card-proyectos a{
+ }
+ .container-proyectos-cards .card-proyectos a{
     color: var(--blanco);
+    font-size: var(--subtitulo);
     text-decoration: none;
-    font-weight: 200;
-   
-   
-}
+    font-weight: 600;
+ }
+ .container-proyectos-cards .card-proyectos a:hover{
+    color: #025880;
+    
+ }
+
 .cita{
     padding: 0;
     margin: 0;
@@ -228,24 +248,30 @@ footer{
     footer{
         margin-bottom: 4.22rem;
     }
-    .container-hero .imagen-hero{
-        height: 25rem;
-        background-position: center;
-    }
-    .container-hero .imagen-hero .h1 h1{
-        font-size: 2.3rem;
-    }
-    .container-hero .imagen-hero .h1 p{
+   
+    section .container-hero .imagen-hero .h1 .contenedor span,
+    section .container-hero .imagen-hero .h1 .contenedor h1{
         font-size: 1.5rem;
-        
+        margin: .1rem 0;
+       
+    }
+    section .container-hero .imagen-hero .h1 .contenedor p{
+        font-size: 1rem;
+
     }
     [id]{
         scroll-margin-top: 1rem;
     }
    
     .container-proyectos-cards{
-        width: 80%;
+        width: 85%;
         
+    }
+
+    .container-proyectos-cards{
+   
+        grid-template-columns: 1fr;
+       
     }
     
 }
