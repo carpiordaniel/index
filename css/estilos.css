@@ -1,247 +1,583 @@
 :root{
-    --color-header:#232323;
-    --color-body:#1B1B1B;
-    --color-letra:#626262;
-    --color-letra-gris:#CDCDCD;
-    --color-blanco:#FFFFFF;
-    --color-letra-proyecto:#CDCDCD;
-    --color-celeste:cornflowerblue;
-    --tamanio-grande:80px;
-    --tamanio-mediano: 40px;
-    --tamanio-pequeño: 25px;
-    --tamanio-responsive: 18px;
-    --fuente: 'Roboto', sans-serif;
+    --negro-uno:#1B1B1B;
+    --negro-dos:#232323;
+    --celeste-claro: #E2F1FF;
+    --gris-oscuro: #626262;
+    --gris-claro: #ACACAC;
+    --verde: #98CA3F; 
+    --azul-oscuro: #03091E;
+    --celeste-oscuro: #0A8ECD;
+    --blanco:#ffffff;
+
+    --titulo:28px;
+    --subtitulo:20px;
+    --texto-intemedio: 18px;
+    --texto:16px;
+
+    --fuente: 'Raleway', sans-serif;
 }
 
-body{
-    margin: 0;
+*{
     padding: 0;
-    color: var(--color-letra);
-    background: var(--color-body);
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
     font-family: var(--fuente);
+    /* position: relative;
+    height: 100vh; */
 }
-header{
-    width: 100%;
-    background: var(--color-header);
-    text-align: center;
-    position: fixed;
-    top: 0;
+[id]{
+    scroll-margin-top: 6rem;
 }
-header img{
-    width: 13%;
-    margin: 2em;
+section main{
+    padding-top: 60px;
 }
-.perfil{
-    margin-top: 8rem;
-    width: 100%;
-    font-weight: 300;
-    text-align: center;
-    font-size:var(--tamanio-pequeño);
+/* menú */
+section main .hero{
+    background-color: var(--celeste-claro);
+    max-width: 1150px;
+    margin: 0 auto;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
 }
-.profesion{
+section main .hero .circle{
+    height: 620px;
+    width: 620px;
+    background-color: red;
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    border-radius: 100%;
+    background: linear-gradient(197.07deg, #E2F1FF 14.15%, rgba(100, 148, 237, 0.488) 88.25%);
+    z-index: 1;
+}
+section main .hero nav{
+    box-shadow: 0px 4px 4px rgba(213, 233, 255, 0.5);
+    border-radius: 40px 40px 0px 0px;
+    
+}
+
+section main .hero nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0;
+}
+section main .hero nav ul li{
+    list-style: none;
+    font-size: var(--subtitulo);
+    font-weight: 800;
+}
+section main .hero nav ul li.logo{
+    width: 40%;
+    color: var(--verde);
+    font-size: 30px;
+    padding-left: 40px;
+}
+
+section main .hero nav ul li a{
+    text-decoration: none;
+    color: var(--gris-oscuro);
+}
+
+section main .hero nav ul li a:target{
+    color: red;
+}
+
+
+section main .hero nav ul li.logo strong{
+    font-weight: 900;
+}
+
+/* content-hero */
+section main .hero .content-hero{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 90px 0;
+
+}
+section main .hero .content-hero .texto-main{
     width: 90%;
-    margin: 0 auto;
-    font-size: var(--tamanio-grande);
-    text-align: center;
+    height: auto;
+    position: relative;
+    z-index: 100;
+}
+section main .hero .content-hero .texto-main .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 80px;
 }
 
-.proyectos, .frontend-mentor{
+section main .hero .content-hero .texto-main .texto p{
+    color: var(--gris-oscuro);
+    font-size: 40px;
+    line-height: 150%;
+}
+section main .hero .content-hero .texto-main .texto p strong{
+    color: var(--verde);
+}
+
+section main .hero .content-hero .texto-main .texto button{
+    border-radius: 100px;
+    border: none;
+    width: 200px;
+    background-color: var(--celeste-oscuro);
+    color: var(--blanco);
+    font-weight: 600;
+    font-size: var(--subtitulo);
+    padding: 15px 20px;
+    box-shadow: 0px 4px 4px #92C5FD;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+section main .hero .content-hero .imagen-main {
+    padding-right: 100px;
+    position: relative;
+    z-index: 100;
+
+}
+section main .hero .content-hero .imagen-main figure img{
+    width: 100%;
+}
+
+section main .hero .redes-sociales{
+    background-color: var(--blanco);
+    position: absolute;
+    top: calc(50% - 70px);
+    border-radius: 0 10px 10px 0;
+    z-index: 200;
+    width: 50px;
+    height: 200px;
+}
+section main .hero .redes-sociales .redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 0 10px;
+}
+section main .hero .redes-sociales .redes p{
+    cursor: pointer;
+}
+section main .hero .redes-sociales figure img{
+    width: 100%;
+}
+
+/* sobre mi */
+
+section.section-sobre-mi{
+    margin: 50px auto;
+    background-color: var(--azul-oscuro);
+    max-width: 1500px;
+    /* margin: 0 auto; */
+}
+section .sobre-mi{
+    color: var(--blanco);
+    display: flex;
+    
+}
+section .sobre-mi .titulo-sobre-mi{
+    background-color: var(--blanco);
+    color: var(--verde);
+    font-weight: 800;
+    font-size: var(--titulo);
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 100px 0 ;
+}
+
+section .sobre-mi .texto-sobre-mi{
+    margin: 60px 30px;
+    margin-right: 100px;
+}
+section .sobre-mi .texto-sobre-mi p{
+    margin: 15px 0 ;
+    text-align: justify;
+    font-size: var(--texto);
+    
+}
+
+/* servicios */
+section.servicios .servicios-ofrecidos{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
-    margin: 0 auto;
-    background: #F9F9F9;
-    border-radius: .5rem;
-    padding-bottom: 4rem;
-}
-.proyectos h3{
-    grid-column: 1/-1;
-    text-align: center;
-    font-size: var(--tamanio-mediano);
-    font-weight: 200;
-}
-.lista-proyectos, .proyectos-futuros{
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    font-size: var(--tamanio-pequeño);
-
-}
-.lista-proyectos i{
-    color:rgb(32, 172, 32);
-
-}
-.lista-proyectos li a{
-   text-decoration: none;
-   color: var(--color-letra);
-}
-.lista-proyectos{
-    grid-column: 1/2;
-    display: grid;
-   
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1150px;
+    background-color: var(--celeste-claro);
+    margin: 50px auto;
+    border-radius: 40px;
+    padding: 75px 0;
     align-items: center;
 }
-.lista-proyectos li{
-    list-style: none;
-}
 
-.proyectos-futuros{
-    grid-column: 2/-1;
-    background: var(--color-blanco);
+section.servicios .servicios-ofrecidos .detalle-servicio-titulo{
+    background-color: var(--blanco);
+    border-radius:  0 150px 150px 0;
+    height: 150px;
+    box-shadow: 0px 4px 4px rgba(201, 201, 201, 0.25);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
 
-}
-.proyectos-futuros img{
-    width: 30%;
-}
-.proyectos-futuros p{
-    color: var(--color-letra-gris) ;
-    margin-left: 1rem;
-}
-.frontend-mentor{
-    grid-template-columns: repeat(1, 1fr);
-    margin-top: 2.5rem;
-}
-.frontend-mentor .titulo{
-    text-align: center;
-    color: var(--color-celeste);
-    font-size: var(--tamanio-pequeño);
-    margin-bottom: 0;
-}
-.soluciones{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    font-size: var(--tamanio-pequeño);
-}
-.solucion{
-    margin: 0 1rem;
-    border-bottom: 1px solid var(--color-letra-gris);
+section.servicios .detalle-servicio{
+    border-left: 2px solid #C3DAFA;
+    padding: 0 30px;
     
 }
-.solucion p {
-    text-align: left;
-    color:var(--color-celeste);
+
+section.servicios .detalle-servicio .titulo h3{
+    color: var(--azul-oscuro);
+    font-size: var(--subtitulo);
+    margin: 20px 0;
 }
-.solucion a{
-    text-decoration: none;
-    color: var(--color-letra-proyecto);
+
+section.servicios .detalle-servicio .texto p{
+    color: var(--gris-oscuro);
+    font-size: var(--texto);
 }
-.solucion i{
-    color: #000000;
+
+section.servicios .detalle-servicio .texto p strong{
+    cursor: pointer;
 }
-.cita{
-    width: 90%;
-   
+
+/* mis proyectos */
+section.mis-proyectos{
+    max-width: 1150px;
     margin: 0 auto;
-    text-align: center;
-    margin-top: 0;
 }
-.cita::before{
-    content: '"';
-    color: var(--color-letra);
-   
-    font-size: 150px;
-    font-family: 'Anton', sans-serif;
-}
-
-.cita p{
-    font-size: var(--tamanio-mediano);
-    margin-top: -4rem;
-}
-footer{
+section.mis-proyectos .mis-proyectos{
     display: grid;
-    grid-template-columns: 1fr ;
-    background: var(--color-header);
-    height: 8rem;
-    max-height: 11rem;
-    text-align: center;
-
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.correos{
-    grid-column: 1/-1;
+section.mis-proyectos .mis-proyectos .card_1{
+    background-color: #D56853;
+}
+section.mis-proyectos .mis-proyectos .card_2{
+    background-color: #141C3A;
+}
+section.mis-proyectos .mis-proyectos .card_3{
+    background-color: #5850C5;
+}
+section.mis-proyectos .mis-proyectos .card_4{
+    background-color: #1AA6AB;
+}
+section.mis-proyectos .mis-proyectos .card_5{
+    background-color: #36393D;
+}
+section.mis-proyectos .mis-proyectos .card_6{
+    background-color: #246038;
+}
+
+section.mis-proyectos .mis-proyectos .card{
+    border-radius: 20px;
+}
+
+section.mis-proyectos .mis-proyectos .card figure{
     display: flex;
-
-   
-    padding-top: -20px;
-
+    justify-content: center;
+    align-items: center;
+    height: 220px;
 }
 
-.redes{
-   grid-column: 1/-1;
-
-}
-.redes a i{
-    color: var(--color-blanco);
-    font-size: var(--tamanio-mediano);
-    margin: 0 2rem;
-}
-.derechos{
-    background: var(--color-body);
-}
-.derechos p{
-    margin: .3rem 0;
-    font-weight: 200;
+section.mis-proyectos .titulo h2{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-left: 5px solid var(--verde);
+    width: 200px;
 }
 
-@media only screen and (max-width: 900px){
-   
-    header img{
-        width: 25%;
-        margin: 2em;
-    }
-    .profesion{
-        font-size: var(--tamanio-mediano);
-    }
+section.mis-proyectos .boton-ver-mas{
+    text-align: center;
+    margin: 50px 0;
+    margin-bottom: 150px;
+}
+
+section.mis-proyectos .boton-ver-mas .boton a{
+    margin: 0 auto;
+}
+
+section.mis-proyectos .boton-ver-mas .boton a{
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--verde);
+    border-radius: 100px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+}
+section.mis-proyectos .boton-ver-mas .boton a img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* footer */
+section.footer{
+    background-color: var(--verde);
+    position: relative;
+    height: 200px;
+}
+section.footer  .div{
+    display: flex;
+    justify-content: center;
+}
+section.footer .footer-contacto{
+    background-color: var(--azul-oscuro);
+    max-width: 1150px;
+    padding: 50px 0;
+    border-radius: 20px;
+    color: var(--blanco);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    top: calc(-10% - 50px);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
     
-    .proyectos h3{
-        font-size: var(--tamanio-pequeño);
+}
+
+section.footer footer{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-end;
+}
+
+section.footer footer p{
+    color: var(--blanco);
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+section.footer .div .boton-contacto{
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+section.footer .div .boton-contacto p{
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--verde);
+    border-radius: 100px;
+    padding: 5px 25px;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+
+section.footer .div .boton-contacto p img{
+    width: 30px;
+    margin-right: 5px;
+}
+
+
+/* formulario de contacto */
+
+.container-general{
+    position: relative;
+}
+body .formulario{
+    background-color: rgb(0,0,0,0.7);
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.864);
+    height: 100%;
+    display: none;
+}
+body .formulario .form{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+}
+
+body .formulario .form .formulario-contact{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+body .formulario .form form{
+    background-color: var(--blanco);
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+body .formulario .form form input,
+body .formulario .form form textarea,
+body .formulario .form form button{
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 35px;
+    padding-left: 10px;
+    border: none;
+    background-color: #F3F3F4;
+}
+
+
+body .formulario .form form textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 90px;
+    max-height: 90px;
+    height: 35px;
+}
+
+body .formulario .form form label{
+   font-size: var(--subtitulo);
+   font-weight: 800;
+   color: var(--gris-oscuro);
+}
+body .formulario .form form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body .formulario .form form button img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+body .formulario .form label.cerrar-form{
+    color: var(--blanco);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    
+    section main .hero .circle{
+        height: 400px;
+        width: 400px;
+        top: 50%;
+        left: -10%;
     }
-    .lista-proyectos{
-        grid-column: 1/-1;
+    section main .hero nav ul li{
         
+        font-size: var(--texto);
+       
     }
-    .proyectos-futuros{
+    section main .hero nav ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+       
+    }
+    section main .hero nav ul li.logo{
         grid-column: 1/-1;
-    
-    }
-    .proyectos-futuros p{
-        font-size:1.2rem;
-    }
-    .proyectos-futuros img{
-        width: 30%;
-    }
-    .soluciones{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .cita::before{ 
-        font-size: 100px;
+        padding-left: 0;
     }
     
-    .cita p{
-        font-size: var(--tamanio-pequeño);
-    }
-    .redes a i{
-        margin: 0 1rem;
-    }
-
-}
-@media only screen and (max-width: 900px){
-    header img{
-        width: 40%;
-        margin: 2em;
+    
+    /* content-hero */
+    section main .hero .content-hero{
+        display: block;
+        padding: 90px 0;
+       
     }
 
-}
-
-@media only screen and (max-width: 550px){
-    .frontend-mentor .titulo{
-        font-size: 1.2rem;
+    section main .hero .content-hero .imagen-main figure img{
+        display: none;
     }
-    .soluciones{
-     
+    
+    
+    /* sobre mi */
+    
+    section .sobre-mi .titulo-sobre-mi{
+        font-size: var(--texto);
+        height: 100px;
+        border-radius: 0 0 80px 0 ;
+    }
+    
+    section .sobre-mi .texto-sobre-mi{
+        margin-right: 40px;
+    }
+  
+    
+    /* servicios */
+    section.servicios .servicios-ofrecidos{
         grid-template-columns: repeat(1, 1fr);
-        font-size: var(--tamanio-responsive);
+        gap: 30px;
+        margin: 0 10px
+    }
+    
+    section.servicios .servicios-ofrecidos .detalle-servicio-titulo{
+        grid-column: 1/-1;
+        margin-bottom: 30px;
+    }
+    
+    section.servicios .detalle-servicio{
+        margin-left: 10px;
     }
 
+    section.mis-proyectos .boton-ver-mas {
+        margin-bottom: 250px;
+    }
+   
+    section.mis-proyectos .mis-proyectos{
+        margin: 0 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.footer .footer-contacto{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        padding: 50px 20px;
+        top: calc(-50% - 50px);
+    }
+    
 }
