@@ -1,0 +1,140 @@
+.misProyectos {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+/* Título */
+.titulo h2 {
+  text-align: center;
+  margin: 100px auto 50px;
+  font-size: var(--titulo);
+  color: var(--azul-oscuro);
+  font-weight: 800;
+}
+
+/* ── Carrusel ────────────────────────────────── */
+.carruselWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 4px;
+}
+
+.carruselViewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carruselTrack {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carruselItem {
+  flex: 0 0 auto;
+}
+
+/* ── Card ─────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(3, 9, 30, 0.06);
+  height: 100%;
+}
+
+.cardLogo {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+}
+
+.cardLogo img {
+  max-width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+}
+
+.cardInfo {
+  padding: 16px 20px 20px;
+  border-top: 1px solid #f0f4f8;
+  background-color: #ffffff;
+}
+
+.cardName {
+  font-size: var(--subtitulo);
+  font-weight: 800;
+  color: var(--azul-oscuro);
+  margin: 0 0 4px;
+}
+
+.cardIndustry {
+  font-size: 13px;
+  color: var(--gris-oscuro);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Botones nav ──────────────────────────────── */
+.navBtn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #d0dae5;
+  background: #ffffff;
+  color: var(--azul-oscuro);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  box-shadow: 0 1px 4px rgba(3, 9, 30, 0.08);
+}
+
+.navBtn:hover:not(:disabled) {
+  border-color: var(--celeste-oscuro);
+  background-color: var(--celeste-oscuro);
+  color: #ffffff;
+}
+
+
+/* ── Dots ─────────────────────────────────────── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d0dae5;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dotActive {
+  background-color: var(--celeste-oscuro);
+  transform: scale(1.35);
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media only screen and (max-width: 800px) {
+  .misProyectos {
+    padding: 0 16px 80px;
+  }
+}

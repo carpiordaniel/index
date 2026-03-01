@@ -1,0 +1,36 @@
+:root {
+  --negro-uno: #1B1B1B;
+  --negro-dos: #232323;
+  --celeste-claro: #E2F1FF;
+  --gris-oscuro: #626262;
+  --gris-claro: #ACACAC;
+  --verde: #98CA3F;
+  --azul-oscuro: #03091E;
+  --celeste-oscuro: #0A8ECD;
+  --blanco: #ffffff;
+
+  --titulo: 28px;
+  --subtitulo: 20px;
+  --texto-intermedio: 18px;
+  --texto: 16px;
+
+  --fuente: 'Raleway', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+.container-general {
+  position: relative;
+}

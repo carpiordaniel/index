@@ -1,0 +1,273 @@
+/* ── Backdrop ─────────────────────────────────── */
+.formulario {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, rgba(3, 9, 30, 0.95) 0%, rgba(10, 142, 205, 0.15) 100%);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ── Card ─────────────────────────────────────── */
+.form {
+  background-color: #03091E;
+  border: 1px solid rgba(152, 202, 63, 0.2);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 36px 36px;
+  position: relative;
+  box-shadow:
+    0 0 0 1px rgba(10, 142, 205, 0.08),
+    0 24px 60px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(10, 142, 205, 0.06);
+}
+
+/* necesario para que el botón cerrar quede relativo a .form */
+.formularioContact {
+  width: 100%;
+}
+
+.formularioContact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Encabezado ────────────────────────────────── */
+.encabezado {
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(152, 202, 63, 0.12);
+  color: var(--verde);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(152, 202, 63, 0.3);
+  margin-bottom: 12px;
+}
+
+.tituloForm {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.subtituloForm {
+  font-size: 13px;
+  color: rgba(226, 241, 255, 0.5);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ── Campos ────────────────────────────────────── */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.fieldGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226, 241, 255, 0.7);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fieldGroup input,
+.fieldGroup textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-family: var(--fuente);
+  font-size: 15px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fieldGroup input::placeholder,
+.fieldGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.fieldGroup input:focus,
+.fieldGroup textarea:focus {
+  border-color: var(--verde);
+  background-color: rgba(152, 202, 63, 0.05);
+  box-shadow: 0 0 0 3px rgba(152, 202, 63, 0.12);
+}
+
+.fieldGroup input[aria-invalid='true'],
+.fieldGroup textarea[aria-invalid='true'] {
+  border-color: #fc8181;
+  box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.12);
+}
+
+.fieldGroup textarea {
+  height: 100px;
+  resize: none;
+  line-height: 1.5;
+}
+
+/* ── Mensajes de error ────────────────────────── */
+.errorMsg {
+  font-size: 12px;
+  color: #fc8181;
+  font-weight: 500;
+}
+
+.errorGeneral {
+  font-size: 13px;
+  color: #fc8181;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* ── Botón enviar ─────────────────────────────── */
+.btnEnviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #98CA3F 0%, #7aab2e 100%);
+  color: #03091E;
+  font-weight: 800;
+  font-size: 15px;
+  font-family: var(--fuente);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(152, 202, 63, 0.3);
+  letter-spacing: 0.01em;
+}
+
+.btnEnviar:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(152, 202, 63, 0.45);
+}
+
+.btnEnviar:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btnEnviar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnEnviar img {
+  width: 18px;
+  filter: brightness(0);
+}
+
+/* ── Botón cerrar ─────────────────────────────── */
+.cerrarForm {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  height: 32px;
+  width: 32px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(226, 241, 255, 0.6);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  font-family: var(--fuente);
+}
+
+.cerrarForm:hover {
+  background-color: rgba(252, 129, 129, 0.15);
+  color: #fc8181;
+  border-color: rgba(252, 129, 129, 0.3);
+}
+
+/* ── Pantalla de éxito ────────────────────────── */
+.successMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 24px 0 8px;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(152, 202, 63, 0.12);
+  border: 1px solid rgba(152, 202, 63, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.successMsg h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--verde);
+  margin: 0;
+}
+
+.successMsg p {
+  font-size: 14px;
+  color: rgba(226, 241, 255, 0.6);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.btnCerrarSuccess {
+  margin-top: 12px;
+  border: 1.5px solid rgba(152, 202, 63, 0.4);
+  border-radius: 100px;
+  background: none;
+  color: var(--verde);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 32px;
+  cursor: pointer;
+  font-family: var(--fuente);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btnCerrarSuccess:hover {
+  background-color: var(--verde);
+  color: #03091E;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 480px) {
+  .form {
+    padding: 36px 24px 28px;
+  }
+}

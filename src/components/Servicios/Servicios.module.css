@@ -1,0 +1,78 @@
+.servicios .serviciosOfrecidos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1150px;
+  background-color: var(--celeste-claro);
+  margin: 50px auto;
+  border-radius: 40px;
+  padding: 75px 0;
+  align-items: center;
+}
+
+.serviciosOfrecidos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1150px;
+  background-color: var(--celeste-claro);
+  margin: 50px auto;
+  border-radius: 40px;
+  padding: 75px 0;
+  align-items: center;
+}
+
+.detalleServicioTitulo {
+  background-color: var(--blanco);
+  border-radius: 0 150px 150px 0;
+  height: 150px;
+  box-shadow: 0px 4px 4px rgba(201, 201, 201, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.detalleServicio {
+  border-left: 2px solid #C3DAFA;
+  padding: 0 30px;
+}
+
+.titulo h3 {
+  color: var(--azul-oscuro);
+  font-size: var(--subtitulo);
+  margin: 20px 0;
+}
+
+.texto p {
+  color: var(--gris-oscuro);
+  font-size: var(--texto);
+}
+
+.ctaInline {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--fuente);
+  font-size: var(--texto);
+  font-weight: 700;
+  color: var(--celeste-oscuro);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media only screen and (max-width: 800px) {
+  .serviciosOfrecidos {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin: 0 10px;
+  }
+
+  .detalleServicioTitulo {
+    grid-column: 1 / -1;
+    margin-bottom: 30px;
+  }
+
+  .detalleServicio {
+    margin-left: 10px;
+  }
+}

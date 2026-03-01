@@ -1,0 +1,46 @@
+.sectionSobreMi {
+  margin: 50px auto;
+  background-color: var(--azul-oscuro);
+  max-width: 1500px;
+}
+
+.sobreMi {
+  color: var(--blanco);
+  display: flex;
+}
+
+.tituloSobreMi {
+  background-color: var(--blanco);
+  color: var(--verde);
+  font-weight: 800;
+  font-size: var(--titulo);
+  width: 700px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 100px 0;
+}
+
+.textoSobreMi {
+  margin: 60px 30px;
+  margin-right: 100px;
+}
+
+.textoSobreMi p {
+  margin: 15px 0;
+  text-align: justify;
+  font-size: var(--texto);
+}
+
+@media only screen and (max-width: 800px) {
+  .tituloSobreMi {
+    font-size: var(--texto);
+    height: 100px;
+    border-radius: 0 0 80px 0;
+  }
+
+  .textoSobreMi {
+    margin-right: 40px;
+  }
+}
