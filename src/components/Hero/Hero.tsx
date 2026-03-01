@@ -39,7 +39,7 @@ export default function Hero({ onContactClick }: HeroProps) {
             </div>
             <div className={styles.imagenMain}>
               <figure>
-                <img src="/img/programmer.png" alt="imagen hero programmer" />
+                <img src={`${import.meta.env.BASE_URL}img/programmer.png`} alt="imagen hero programmer" />
               </figure>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function Hero({ onContactClick }: HeroProps) {
             <div className={styles.redes}>
               <figure>
                 <a href="https://www.linkedin.com/in/carpiordaniel/" target="_blank" rel="noopener noreferrer">
-                  <img src="/icon/icon_logo-linkedin.png" alt="LinkedIn" />
+                  <img src={`${import.meta.env.BASE_URL}icon/icon_logo-linkedin.png`} alt="LinkedIn" />
                 </a>
               </figure>
               <figure>
@@ -59,12 +59,12 @@ export default function Hero({ onContactClick }: HeroProps) {
                   aria-label="Enviar mensaje"
                   className={styles.btnRed}
                 >
-                  <img src="/icon/icon-message.png" alt="" />
+                  <img src={`${import.meta.env.BASE_URL}icon/icon-message.png`} alt="" />
                 </button>
               </figure>
               <figure>
                 <a href="https://github.com/carpiordaniel" target="_blank" rel="noopener noreferrer">
-                  <img src="/icon/icon_github.png" alt="GitHub" />
+                  <img src={`${import.meta.env.BASE_URL}icon/icon_github.png`} alt="GitHub" />
                 </a>
               </figure>
             </div>

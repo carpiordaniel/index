@@ -13,7 +13,7 @@ export default function Footer({ onContactClick }: FooterProps) {
           <p>Cuéntame tu idea y te respondo en menos de 24 horas. Sin compromiso.</p>
           <div className={styles.botonContacto}>
             <button onClick={onContactClick}>
-              <img src="/icon/message.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}icon/message.png`} alt="" />
               Enviar mensaje
             </button>
           </div>

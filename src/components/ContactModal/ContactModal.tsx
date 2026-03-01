@@ -98,7 +98,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 {sendStatus === 'loading' ? (
                   'Enviando…'
                 ) : (
-                  <><img src="/icon/send-message.png" alt="" /> Enviar mensaje</>
+                  <><img src={`${import.meta.env.BASE_URL}icon/send-message.png`} alt="" /> Enviar mensaje</>
                 )}
               </button>
             </form>
